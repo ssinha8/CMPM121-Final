@@ -13,8 +13,8 @@ public class FollowPlayer : MonoBehaviour
     void FixedUpdate()
     {
         Vector3 desiredPosition = player.transform.position + player.transform.rotation * locationOffset;
-        Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
-        transform.position = smoothedPosition;
+        // Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
+        transform.position = desiredPosition;
 
         Quaternion desiredrotation = player.transform.rotation * Quaternion.Euler(rotationOffset);
         Quaternion smoothedrotation = Quaternion.Lerp(transform.rotation, desiredrotation, smoothSpeed);
