@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class Interactable : MonoBehaviour
 {
     public bool canPickup = false;
     public int bookCount;
+    public TextMeshProUGUI bookTrack;
     GameObject book;
+    public GameObject roof;
 
     void Start()
     {
@@ -19,6 +23,13 @@ public class Interactable : MonoBehaviour
         {
             canPickup = true;
             book = other.gameObject;
+        }
+        else if (other.CompareTag("Teleporters"))
+        {
+            if (bookCount == 5)
+            {
+                EndGame();
+            }
         }
     }
 
@@ -42,5 +53,12 @@ public class Interactable : MonoBehaviour
         bookCount += 1;
         Destroy(book);
         canPickup = false;
+        bookTrack.text = "Books: " + bookCount + "/5"; 
+    }
+
+    public void EndGame()
+    {
+        Destroy(roof);
+        bookTrack.text = "Well done!";
     }
 }

@@ -19,8 +19,9 @@ public class PlayerMovement : MonoBehaviour
 
         float zMove = Input.GetAxisRaw("Vertical");
 
-
-        rb.AddRelativeForce(Vector3.forward * speed * zMove);
+        if (Input.GetKey(KeyCode.W)) {
+            rb.AddRelativeForce(Vector3.forward * speed * zMove);
+        }
 
         if (Input.GetKeyDown(KeyCode.A)) {
             transform.Rotate(0, -90.0f, 0, Space.Self);

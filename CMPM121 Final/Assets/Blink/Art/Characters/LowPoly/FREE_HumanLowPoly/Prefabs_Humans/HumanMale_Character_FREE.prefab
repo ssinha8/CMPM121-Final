@@ -990,7 +990,7 @@ GameObject:
   - component: {fileID: 6930953657644585749}
   - component: {fileID: 6998311254783833276}
   - component: {fileID: 1384847975}
-  - component: {fileID: 2063149128136940478}
+  - component: {fileID: 1384847984}
   m_Layer: 0
   m_Name: HumanMale_Character_FREE
   m_TagString: Player
@@ -1079,7 +1079,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
---- !u!114 &2063149128136940478
+--- !u!114 &1384847984
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1091,6 +1091,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07acbade862f3684b8176f9cc13ee96e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canPickup: 0
+  bookCount: 0
+  bookTrack: {fileID: 0}
 --- !u!1 &1789272960074739661
 GameObject:
   m_ObjectHideFlags: 0
