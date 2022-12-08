@@ -6,7 +6,7 @@ public class FollowPlayer : MonoBehaviour
 {
 
     public GameObject player;
-    public float smoothSpeed = 0.125f;
+    public float smoothSpeed = 0.25f;
     public Vector3 locationOffset;
     public Vector3 rotationOffset;
 
